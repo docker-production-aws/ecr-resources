@@ -1,0 +1,12 @@
+### Production environment settings
+
+# STS role and target account
+Sts.Role: arn:aws:iam::543279062384:role/admin
+
+# ECR Repositories
+Config.Repositories:
+  dockerproductionaws/microtrader-base: {}
+  dockerproductionaws/microtrader-audit: {}
+  dockerproductionaws/microtrader-dashboard: {}
+  dockerproductionaws/microtrader-portfolio: {}
+  dockerproductionaws/microtrader-quote: {}

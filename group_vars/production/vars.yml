@@ -11,3 +11,6 @@ Config.Repositories:
   dockerproductionaws/microtrader-portfolio: {}
   dockerproductionaws/microtrader-quote: {}
   dockerproductionaws/squid: {}
+  dockerproductionaws/codebuild:
+    ReadOnlyServices:
+      - codebuild.amazonaws.com

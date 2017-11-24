@@ -1,0 +1,18 @@
+# Assume Role
+- name: Assume Role
+  hosts: "{{ env }}"
+  gather_facts: no
+  vars:
+    Sts:
+      Role: arn:aws:iam::543279062384:role/admin
+  roles:
+    - aws-sts
+
+# Deploy CloudFormation Stack
+- name: Stack Deployment
+  hosts: "{{ env }}"
+  environment: "{{ Sts.Credentials }}"
+  roles:
+    - aws-cloudformation
+
+# You can add post deployment plays here as required
